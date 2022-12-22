@@ -9,16 +9,19 @@ balanceButton.onclick = function balancing () {
   const input2 = mass2.value
   const answers = list.value
   const result = answers.split(',')
-
-  for (let i = 0; i < result.length; i++) {
-    for (let j = 0; j < result.length; j++) {
+  
       if (input1 === input2) {
         holder.innerHTML = 'balance'
-      } else if (parseInt(input1) + parseInt(result[i]) === parseInt(input2) + parseInt(result[j])) {
-        holder.innerHTML = `${result[i]}, ${result[j]}`
-      } else {
-        holder.innerHTML = 'unbalance'
-      }
-    }
-  }
+      } 
+      
+      else(input1 != input2) 
+        for (let i = 0; i < result.length; i++) {
+          let ans =  parseInt(input1) + parseInt(result[i])
+          let ans2 = parseInt(input2) + parseInt(result[i])
+          
+        }
+      
+    
+  
+  
 }
