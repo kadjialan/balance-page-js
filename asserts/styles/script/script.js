@@ -4,9 +4,8 @@ const holder = document.querySelector('.display')
 const balanceButton = document.querySelector('.start')
 const list = document.querySelector('.characters')
 
-balanceButton.onclick = function balancing () {
+balanceButton.onclick = function balancing() {
   const input1 = mass1.value
-  console.log(input1)
   const input2 = mass2.value
   const answers = list.value
   const result = answers.split(',')
@@ -16,11 +15,17 @@ balanceButton.onclick = function balancing () {
   } else (input1 !== input2)
   for (let i = 0; i < result.length; i++) {
     for (let j = 0; j < result.length; j++) {
-      let valid = parseInt(input1) + parseInt(result[i]) === parseInt(input2) + parseInt(result[j])
-      if (valid) {
-        holder.innerHTML = `add ${result[i]}, ${result[j]}`
+      let count = 0
+      if (parseInt(input1) + parseInt(result[i]) === parseInt(input2) + parseInt(result[j])) {
+        count++
+        console.log(count)
+        if (count) {
+          holder.innerHTML = `add ${result[i]}, ${result[j]}`
+
+        } else if(count!== 1) {
+          holder.innerHTML = 'nothing'
+        }
       }
     }
   }
 }
-
