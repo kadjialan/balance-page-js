@@ -4,7 +4,7 @@ const holder = document.querySelector('.display')
 const balanceButton = document.querySelector('.start')
 const list = document.querySelector('.characters')
 
-balanceButton.onclick = function balancing() {
+balanceButton.onclick = function balancing () {
   const input1 = mass1.value
   const input2 = mass2.value
   const answers = list.value
@@ -21,8 +21,10 @@ balanceButton.onclick = function balancing() {
         console.log(count)
         if (count) {
           holder.innerHTML = `add ${result[i]}, ${result[j]}`
-
-        } 
+        }
+        break
+      } else {
+        holder.innerHTML = 'nothing'
       }
     }
   }
