@@ -10,22 +10,18 @@ balanceButton.onclick = function balancing () {
   const answers = list.value
   const result = answers.split(',')
 
-  if (input1 === input2) {
-    holder.innerHTML = 'balance'
-  } else (input1 !== input2)
   for (let i = 0; i < result.length; i++) {
     for (let j = 0; j < result.length; j++) {
-      let count = 0
-      if (parseInt(input1) + parseInt(result[i]) === parseInt(input2) + parseInt(result[j])) {
-        count++
-        console.log(count)
-        if (count) {
-          holder.innerHTML = `add ${result[i]}, ${result[j]}`
-        }
-        break
-      } else {
-        holder.innerHTML = 'nothing'
-      }
+    console.log(result[j])
+    if (input1 === input2) {
+    holder.innerHTML = 'balance'
+    } 
+    else if (parseInt(input1) + parseInt(result[i]) === parseInt(input2) + parseInt(result[j])) {
+    holder.innerHTML = `add ${result[i]}, ${result[j]}`
+    break
+    } else {
+    holder.innerHTML = 'not balance'
     }
-  }
+    }
+    }
 }
