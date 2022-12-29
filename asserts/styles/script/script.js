@@ -22,9 +22,7 @@ balanceButton.onclick = function balancing() {
         if (count) {
           holder.innerHTML = `add ${result[i]}, ${result[j]}`
 
-        } else if(count!== 1) {
-          holder.innerHTML = 'nothing'
-        }
+        } 
       }
     }
   }
