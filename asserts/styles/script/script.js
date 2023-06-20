@@ -12,19 +12,16 @@ balanceButton.onclick = function balancing () {
 
   for (let i = 0; i < result.length; i++) {
     for (let j = 0; j < result.length; j++) {
-      const firstSum = parseInt(input1) + parseInt(result[i])
-      const secondSum = parseInt(input2) + parseInt(result[j])
-      console.log(firstSum, secondSum)
       if (input1 === input2) {
-        holder.innerHTML = 'balance'
-      } else {
-        if (firstSum === secondSum) {
-          holder.innerHTML = `add ${result[i]}, ${result[j]}`
-          break
-        } else {
-          holder.innerHTML = 'not balance'
-        }
+        return (holder.innerHTML = 'balance')
+      }
+      if (
+        parseInt(input1) + parseInt(result[i]) ===
+        parseInt(input2) + parseInt(result[j])
+      ) {
+        return (holder.innerHTML = `add ${result[i]}, ${result[j]}`)
       }
     }
   }
+  holder.innerHTML = 'not balance'
 }
