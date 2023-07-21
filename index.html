@@ -11,16 +11,27 @@
     <div class="container">
       <h1>Spring Balance</h1>
       <div class="top">
-        <input type="number" placeholder="weight1" class="weight1" />
-        <input type="number" placeholder="weight2" class="weight2" />
+        <div class="inputHolders">
+          <label> <b>Weight 1</b> </label>
+          <input type="number" placeholder="0" class="weight1" />
+        </div>
+
+        <div class="inputHolders">
+          <label><b>Weight 2</b> </label>
+          <input type="number" placeholder="0" class="weight2" />
+        </div>
       </div>
 
       <div class="balance">
-        <input type="" placeholder="range of values" class="characters" />
+        <div class="inputHolders">
+          <label> <b>Range of values</b> </label>
+          <input type="" placeholder="2,3,,4,5" class="characters" />
+        </div>
+
         <button class="start">balance</button>
       </div>
 
-      <div class="display"></div>
+      <div class="display">result</div>
     </div>
 
     <script src="asserts/styles/script/script.js"></script>

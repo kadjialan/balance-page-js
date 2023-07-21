@@ -31,10 +31,17 @@ body {
   border: 1px solid #000000c6;
   color: white;
   padding: 0 10px;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color:#fff;
+  color: black;
+  border: 1px solid black;
 }
 
 .characters {
-  width: 50%;
+  width: 100%;
   height: 30px;
   border-radius: 8px;
 }
@@ -71,4 +78,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.inputHolders {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 20px;
 }
