@@ -80,7 +80,7 @@ body {
   align-items: center;
 }
 
-.inputHolders {
+.input-holders {
   display: flex;
   flex-direction: column;
   width: 100%;
